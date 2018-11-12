@@ -1,0 +1,64 @@
+/*
+	Color Scheme and Fonts
+*/
+
+$white: #fff;
+$black: #000;
+$orange_light_bg: #ffc330;
+$orange_dark_bg: #f7992a;
+$yellow_bg: #fbe93a;
+$orange_bg: rgba(255,168,0,0.36);
+$black_line: #505050;
+$green_grad_dark: #018b86;
+$green_grad_light: #00c6b4;
+$grey_dark_bg: #dddddd;
+$grey_light_bg: #eaeaea;
+$black_bg: #333333;
+$red_text: #eb6320;
+$yellow_text: #ffea00;
+$green_text: #009c88;
+
+$error: #fef5f5;
+$inactive: rgba(232,97,106,0.55);
+
+$main_font:  Helvetica, Arial, sans-serif;
+
+/* Links */
+a, a:visited, a:focus, a:active {color: $white; text-decoration: none;}
+a:hover {color: $white; text-decoration: none;}
+
+body {background-color: $grey_dark_bg; color: $white; font-family: $main_font;}
+
+.text_black {color: $black;}
+.text_red {color: $red_text;}
+.text_green {color: $green_text;}
+.text_yellow {color: $yellow_text;}
+
+.orange-grad {background: linear-gradient(to bottom, $orange_light_bg, $orange_dark_bg);}
+.green-grad {background: linear-gradient(to bottom, $green_grad_dark, $green_grad_light);}
+.light-grey-bg {background-color: $grey_light_bg;}
+.black-bg {background-color: $black_bg;}
+
+.button_yellow {
+	background-color: $yellow_bg;
+	background-image: linear-gradient(to bottom, $yellow_bg 0%, $yellow_bg 80%, $orange_bg 100%);
+}
+
+/*adaptivity*/
+	/*mobile*/
+	@media only screen and (min-width: 320px) {
+
+	}
+	/*tablets*/
+	@media only screen and (min-width: 768px) {
+		
+	}
+	/*desktop or tablets in landscape*/
+	@media only screen and (min-width: 1000px) {
+		
+	}
+
+	/*wideview monitor*/
+	@media only screen and (min-width: 1441px) {
+
+	}

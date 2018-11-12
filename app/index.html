@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>FoxyStudio</title>
+	<title>FoxStudio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
 	<!--[if IE]>
   <link href="css/styleie.css" rel="stylesheet" type="text/css">
   <![endif]-->
 
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
   <!-- endbower -->
   <!-- endbuild -->
+	
+	<link href="css/style.css" rel="stylesheet" type="text/css">
 
   <!-- build:js js/vendor.js -->
   <!-- bower:js -->
@@ -20,15 +22,238 @@
   <script src="/bower_components/jquery-form/src/jquery.form.js"></script>
   <script src="/bower_components/es5-shim/es5-shim.js"></script>
   <script src="/bower_components/html5shiv/dist/html5shiv.js"></script>
+  <script src="/bower_components/swiper/dist/js/swiper.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
-  <link rel="icon" href="">
+  <link rel="icon" href="favicon.ico">
 </head>
 <body>
-	<h1>Hello!</h1>
+	<div class="wrapper wrapper_main" id="top">
+		<header class="header orange-grad">
+			<div class="wrapper">
+				<div class="header__info">
+					<div class="header__info_logo text_black"><a href="#" class="logo text_black"></a></div>
+					<div class="header__info_tel">+375 (29) 000-00-00</div>
+				</div>
+				<div class="header_text">
+					<div>ШИРОКОФОРМАТНАЯ ПЕЧАТЬ ЛЮБОЙ СЛОЖНОСТИ <br class="wideviews">без выходных <br class="mobileviews">и перерывов</div>
+					<div class="text_black">Пройдите опрос и получите <br>комплект VIP-визиток при заказе</div>
+				</div>
+				<div class="header_button"><a href="#" class="text_black button_yellow"><div class="button-wrapp"><span class="text_black">пройти опрос</span></div></a></div>
+				<div class="header__features">
+					<div class="header__features_item">
+						<div class="feature_image" id="image_1"></div>
+						<div class="feature_text text_black"><span><strong>Бесплатный</strong> выезд специалиста</span></div>
+					</div>
+					<div class="header__features_item">
+						<div class="feature_image" id="image_2"></div>
+						<div class="feature_text text_black"><span><strong>Бесплатная</strong> цветопроба</span></div>
+					</div>
+					<div class="header__features_item">
+						<div class="feature_image" id="image_3"></div>
+						<div class="feature_text text_black"><span><strong>Гостовность</strong> сегодня на завтра</span></div>
+					</div>
+					<div class="header__features_item">
+						<div class="feature_image" id="image_4"></div>
+						<div class="feature_text text_black"><span>Организация <strong>доставки по всей РБ</strong></span></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<article class="price green-grad">
+				<div class="wrapper">
+					<h1>Рассчитаем стоимость до копейки</h1>
+					<p class="text_black">Отправьте макет и узнайте точную стоимость</p>
+					<form action="handler.php" name="price">
+						<h2 class="text_black">заполните данные</h2>
+						<input type="email" placeholder="ваш e-mail" name="email" class="textarea" required>
+						<input type="tel" placeholder="ваш номер" name="number" pattern="^\+[0-9]{3}\s*?-*?[0-9]{2}\s*?-*?[0-9]{3}\s*?-*?[0-9]{2}\s*?-*?[0-9]{2}$" class="textarea">
+						<button type="button" class="button button_yellow text_black"><input type="file"><div class="button-wrapp"><span>прикрепить</span></div></button>
+						<button type="submit" class="button button_yellow text_black" ><div class="button-wrapp"><span>отправить</span></div></button>
+					</form>
+				</div>
+			</article>
+			<article class="services">
+				<div class="wrapper">
+					<h1 class="text_red">Выполняем любые виды широкофрматнойпечати</h1>
+				</div>
+				<section class="section_1">
+					<div class="wrapper">
+						<div class="img"></div>
+						<h2 class="text_green">печать на самоклеющейся пленке</h2>
+						<p class="text_black">BACKLIT (бэклит) создан специально для использования в конструкциях с внутренней подсветкой (световые короба, световые панели и т.д.). Благодаря белому матовому полупрозрачному покрытию пленка хорошо рассеивает свет, который проходит через нее. Изображения, напечатанные на пленке выглядят более ярко, цвета более насыщенны, поэтому рекламные конструкции с использованием пленки.</p>
+					</div>
+				</section>
+				<section class="section_2 light-grey-bg">
+					<div class="wrapper">
+						<div class="img"></div>
+						<h2 class="text_green">печать на ткани, бумаге и холсте</h2>
+						<p class="text_black">При печати используется бумага BlueBack (БлюБэк). Она имеет покрытие оборотной стороны особого голубого цвета (отсюда и название). Применением этого покрытия обусловлена высокая укрывистость готового изделия. Постеры или плакаты могут наклеиваться на темные или очень пестрые основы, при этом нижележащее изображение не просвечивает и не вносит цветовых искажений даже на постерах с белым фоном.</p>
+						<p class="text_black">Широкоформатная печать на ткани отличается высокой точностью и тонкой цветопередачей, что позволяет работать с реалистичными растровыми изображениями и выразительной векторной графикой. Она экологически безопасна, может использоваться для декорирования жилых помещений. В то же время красочное покрытие устойчиво к атмосферным воздействиям, механическим нагрузкам, пригодно для оформления растяжек и даже парусов.</p>
+					</div>
+				</section>
+				<section class="section_3">
+					<div class="wrapper">
+						<div class="img"></div>
+						<h2 class="text_green">печать на баннере и сетке</h2>
+						<p class="text_black">Баннерная ткань BACKLIT (Бэклит, Бэк-Лит) — это светорассеивающая ПВХ-ткань с прозрачностью 25%—37% и плотностью 420—510 г/² . BACKLIT представляет собой полиэфирную сетку с полупрозрачным белым ПВХ-покрытием. Баннер BACKLIT применяется для изготовления лицевой поверхности световых коробов больших размеров. Матовое покрытие позволяет избежать нежелательных бликов и отсветов на плакате. Баннер Бэклит применяется для оформления объектов уличной рекламы с внутренней подсветкой — световых коробах или других объемных конструкциях.</p>
+						<p class="text_black">Также осуществляем печать на банерах BLOCKOUT, сетке с подложкой.</p>
+					</div>
+				</section>
+				<section class="section_4 light-grey-bg">
+					<div class="wrapper">
+						<div class="img"></div>
+						<h2 class="text_green">плоттерная резка</h2>
+						<p class="text_black">С помощью плоттерной резки можно изготовить любую надпись или узор из разных материалов от самоклеющейся пленки до плотной бумаги или магнитного винила. Так же с помощью резки на плоттере мы изготавливаем трафареты из любых видов пленок. Изображение вырезанное на специальной пленке флекс мы можем перенести на ткань.</p>
+					</div>
+				</section>
+				<section class="section_5">
+					<div class="wrapper">
+						<div class="img"></div>
+						<h2 class="text_green">биллборды, наклейки на авто</h2>
+						<p class="text_black">BACKLIT (бэклит) создан специально для использования в конструкциях с внутренней подсветкой (световые короба, световые панели и т.д.). Благодаря белому матовому полупрозрачному покрытию пленка хорошо рассеивает свет, который проходит через нее. Изображения, напечатанные на пленке выглядят более ярко, цвета более насыщенны, поэтому рекламные конструкции с использованием пленки будут привлекать больше внимания, реклама будет работать лучше.</p>
+					</div>
+				</section>
+			</article>
+			<article class="benefits green-grad">
+				<div class="wrapper">
+					<h1>Почему у нас лучшие условия и цены?</h1>
+					<div class="article__features">
+						<div class="article__features_item">
+							<div class="benefit_image" id="image_1"></div>
+							<div class="benefit_text text_black"><span><strong>Не перезаказываем</strong> собственное производство</span></div>
+						</div>
+						<div class="article__features_item">
+							<div class="benefit_image" id="image_2"></div>
+							<div class="benefit_text text_black"><span><strong>Новое оборудование</strong> с экономией чернил</span></div>
+						</div>
+						<div class="article__features_item">
+							<div class="benefit_image" id="image_3"></div>
+							<div class="benefit_text text_black"><span>Особые <strong>условия и скидки</strong> для постоянных клиентов</span></div>
+						</div>
+						<div class="article__features_item">
+							<div class="benefit_image" id="image_4"></div>
+							<div class="benefit_text text_black"><span>Сами завозим <strong>комплектующие и материалы</strong></span></div>
+						</div>
+						<div class="article__features_item">
+							<div class="benefit_image" id="image_5"></div>
+							<div class="benefit_text text_black"><span>Работаем с <strong>крупными заказчиками и ГОС</strong></span></div>
+						</div>
+						<div class="article__features_item">
+							<div class="benefit_image" id="image_6"></div>
+							<div class="benefit_text text_black"><span>Выполняем срочные заказы <strong>без задержек</strong></span></div>
+						</div>
+						<div class="article__features_item">
+							<div class="benefit_image" id="image_7"></div>
+							<div class="benefit_text text_black"><span>Работаем <strong>24/7</strong> без перерывов</span></div>
+						</div>
+						<div class="article__features_item">
+							<div class="benefit_image" id="image_8"></div>
+							<div class="benefit_text text_black"><span><strong>Бесплатная</strong> доставка крупных заказов</span></div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="installation black-bg">
+				<div class="wrapper">
+					<h1 class="text_yellow">Монтаж дешевле,чем у конкурентов!</h1>
+					<div class="img"></div>
+					<p>Собственная вышка для монтажа позволяет сделать сотрудничество с нами еще более выгодным.</p>
+					<p class="text_yellow">Мы также подготовили для вас памятку, которая поможет вам сэкономить на печати.</p>
+					<p>Собственная вышка для монтажа позволяет сделать сотрудничество с нами еще более выгодным.</p>
+					<form action="handler.php" name="order">
+						<input type="email" placeholder="ваш e-mail" name="email" class="textarea" required>
+						<input type="tel" placeholder="ваш номер" name="number" pattern="^\+[0-9]{3}\s*?-*?[0-9]{2}\s*?-*?[0-9]{3}\s*?-*?[0-9]{2}\s*?-*?[0-9]{2}$" class="textarea">
+						<button type="submit" class="button button_yellow text_black" ><div class="button-wrapp"><span>отправить</span></div></button>
+					</form>
+				</div>
+			</article>
+			<article class="examples orange-grad">
+				<div class="wrapper">
+					<h1>Примеры выполненных работ</h1>
+					<div class="slider-container">
+						<!-- Slider main container -->
+						<div class="swiper-container">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slides -->
+								<div class="swiper-slide swiper-slide_1">Slide 1</div>
+								<div class="swiper-slide swiper-slide_2">Slide 2</div>
+								<div class="swiper-slide swiper-slide_3">Slide 3</div>
+								<div class="swiper-slide swiper-slide_4">Slide 4</div>
+								<div class="swiper-slide swiper-slide_5">Slide 5</div>
+								<div class="swiper-slide swiper-slide_6">Slide 6</div>
+								<div class="swiper-slide swiper-slide_7">Slide 7</div>
+								<div class="swiper-slide swiper-slide_8">Slide 8</div>
+							</div>
+							<!-- If we need pagination -->
+							<div class="swiper-pagination"></div>
+						</div>
+						<!-- Navigation buttons -->
+						<div class="prev-slide" id="prev-slide"></div>
+						<div class="next-slide" id="next-slide"></div>
+					</div>
+					<div class="gallery">
+						<div class="swiper-slide swiper-slide_1">Slide 1</div>
+						<div class="swiper-slide swiper-slide_2">Slide 2</div>
+						<div class="swiper-slide swiper-slide_3">Slide 3</div>
+						<div class="swiper-slide swiper-slide_4">Slide 4</div>
+						<div class="swiper-slide swiper-slide_5">Slide 5</div>
+						<div class="swiper-slide swiper-slide_6">Slide 6</div>
+						<div class="swiper-slide swiper-slide_7">Slide 7</div>
+						<div class="swiper-slide swiper-slide_8">Slide 8</div>
+					</div>
+				</div>
+			</article>
+			<article class="partners">
+				<div class="wrapper">
+					<h1 class="text_green">Нам доверяют крупные заказчики</h1>
+					<div class="labels">
+						<div class="labels__item labels__item_1">Медтехноцетр</div>
+						<div class="labels__item labels__item_2 active">Burger King</div>
+						<div class="labels__item labels__item_3">KFC</div>
+						<div class="labels__item labels__item_4">Аливария</div>
+						<div class="labels__item labels__item_5">Остров чистоты</div>
+						<div class="labels__item labels__item_6">МЧС</div>
+						<div class="labels__item labels__item_7">Shell</div>
+						<div class="labels__item labels__item_8">TatNeft</div>
+						<div class="labels__item labels__item_9">McDonalds</div>
+						<div class="labels__item labels__item_10">Dana Mall</div>
+						<div class="labels__item labels__item_11">JYSK</div>
+						<div class="labels__item labels__item_12">ГИППО</div>
+						<div class="labels__item labels__item_13">Белмаркет</div>
+						<div class="labels__item labels__item_14">Wargaming.net</div>
+						<div class="labels__item labels__item_15">Банк Москва-Минск</div>
+						<div class="labels__item labels__item_16">Новая Боровая</div>
+						<div class="labels__item labels__item_17">А-100</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<footer class="footer text_black green-grad">
+			<div class="wrapper">
+				<div class="button__wrapper  text_black">
+					<a href="javascript:void(0)" onclick="scrollToTop()" class="footer__button button_yellow">
+						<p></p>
+						<p class="text_black">Наверх</p>
+					</a>
+				</div>
+				<p class="footer__text">
+					ООО «Фокси Студио»<br>
+					РБ, 220108, г.Минск, ул.Корженевского, д.16, пом.108Б.<br>
+					Р/сч: BY95МТВК30120001093300083527<br>
+					в ЗАО "МТБанка" РКЦ «Вежа»  БИК MTBKBY22<br>
+					г.Минск, пр-т Машерова, д.54<br>
+					УНП 192938883, ОКПО 500871825000
+				</p>
+				<a class="footer__logo" href="http://ggroup.by/" target="_blank" title="Great Consalt Group"></a>
+				<div class="footer__tagline">Разработка успешных сайтов</div>
+			</div>
+		</footer>
+	</div>
 	<script src="js/main.js" type='text/javascript'></script>
   <script src="js/modules.js" type='text/javascript'></script>
-  <script src="js/report-form.js" type='text/javascript'></script>
 </body>
 </html>

@@ -1,0 +1,69 @@
+.header {
+	position: relative; width: 100%; height: auto; padding: 0.9rem 1.667rem 2.083rem;
+	font-size: 1.167em; font-weight: 400; line-height: 1.25;
+	border-bottom: 5px solid #505050;	
+}
+.header .wrapper {
+	position: relative; width: 100%; height: auto;
+	display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+.header__info {
+	display: flex; flex-direction: row; justify-content: space-between; align-items: flex-end;
+	width: 100%; height: 3.333rem; 
+	font-size: 1.333rem; font-weight: bold;
+}
+.header__info_logo, 
+.header__info_tel {display: block; width: 12.5rem; height: 100%;}
+.header__info_tel {height: auto;}
+.header__info_logo a {
+	display: block;
+	position: relative; 
+	width: 100%; height: 100%;
+	background: url(../res/logo.png) 50% 50% no-repeat; background-size: contain; 
+}
+.header_text {padding-top: 2.5rem;}
+.header_text div:first-child {font-size: 1.143em; font-weight: bold; text-transform: uppercase; padding-bottom: 1rem;}
+.header_text div:first-child br {display: none;}
+
+.header_button {
+	padding-top: 1.667rem;
+	padding-bottom: 2.7rem;
+}
+.header_button a {
+	display: block; position: relative;
+	width: 13.333rem; height: 2.5rem;
+	margin: auto;
+	font-weight: 700; text-transform: uppercase;
+}
+.header__features {
+	display: flex; flex-wrap: wrap; flex-direction: column; justify-content: space-between; align-items: flex-end;
+	width: 100%; height: 18rem;
+}
+.header__features_item {
+	display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+	height: 8.15rem; width: 50%;
+}
+.feature_image {width: 90%; height: 4.6rem; background: url(../res/icon_manager.png) 50% 50% no-repeat; background-size: contain;}
+.feature_image#image_2 {background-image: url(../res/icon_freedesighn.png);}
+.feature_image#image_3 {background-image: url(../res/icon_stopwatch.png);}
+.feature_image#image_4 {background-image: url(../res/icon_truck.png);}
+.feature_text {width: 90%; height: 3rem;}
+
+/*adaptivity*/
+	/*mobile*/
+	@media only screen and (min-width: 320px) {
+		
+	}
+	/*tablets*/
+	@media only screen and (min-width: 768px) {
+		
+	}
+	/*desktop or tablets in landscape*/
+	@media only screen and (min-width: 1000px) {
+		
+	}
+
+	/*wideview monitor*/
+	@media only screen and (min-width: 1441px) {
+
+	}
