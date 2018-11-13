@@ -267,11 +267,36 @@ article.partners {padding-bottom: 5rem;}
 		.section_5 .img {width: 55%; height: 31rem; left: -5rem; top: -3.5rem; background-position-y: 0%;}
 		.section_5 p:first-of-type {padding-top: 1.3rem;}
 		.section_5 .article__text > h2 {position: relative; top: auto; left: auto; right: auto; width: 100%; text-align: center;}
+		
+		article.benefits {background: url(../res/green-line_1.png) 0% 0% no-repeat; background-size: auto 45rem; padding-top: 5rem; padding-bottom: 10rem;}
+		article.benefits
+		.article__features {height: 28rem; align-items: flex-start; padding-top: 1rem;}
+		.article__features_item {width: 25%; height: 14.1rem; padding-top: 3rem;}
+		.benefit_text {height: 5rem;}
+		.benefit_image {height: 4.3rem;}
+		.benefit_image#image_1 {height: 4.6rem;}
 
+		article.installation {background: url(../res/black-line.png) 50% 0% no-repeat; background-size: auto 47rem; padding-top: 12rem; padding-bottom: 11rem; top: -13rem;}
+		article.installation .wrapper { align-items: flex-start;}
+		.installation h1 {position: relative; top: auto; left: auto;}
+		.installation p {width: 60%; text-align: justify;}
+		.installation p:first-of-type {padding-top: 2.3rem;}
+		.installation form {width: 100%; flex-direction: row; flex-wrap: no-wrap; justify-content: space-between; padding-top: 3.5rem;}
+		.installation input.textarea, 
+		.installation .button {width: 30%;}
+		.installation input.textarea {margin-bottom: 0;}
+		.installation .img {width: 53%; height: 23.5rem; top: -1.5rem; right: -10.5rem;}
+
+		article.examples {background: url(../res/orange-line.png) 50% 0% no-repeat; background-size: auto 56rem; padding-top: 8rem; padding-bottom: 10rem; top: -20.5rem;}
 		.slider-container {display: none;}
-		.gallery {position: relative; width: 100%; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;}
-		.swiper-slide {display: block; position: relative; width: 19.166rem; height: 12.917rem;}
-
+		.gallery {position: relative; width: 100%; height: 23.1rem; padding-top: 5rem; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center;}
+		.swiper-slide {display: block; position: relative; width: 15.2rem; height: 8.77rem;}
+		
+		article.partners {background: url(../res/white-line.png) 50% 0% no-repeat; background-size: auto 49rem; padding-top: 8rem; padding-bottom: 10rem; top: -25.5rem;}
+		.labels {height: 27rem;}
+		.labels__item {width: 9rem; height: 5.2rem;}
+		.labels__item_6 {height: 7rem;}
+		.labels__item_16, .labels__item_17 {margin: 0;}
 	}
 
 	/*wideview monitor*/
@@ -283,4 +308,8 @@ article.partners {padding-bottom: 5rem;}
 		article  .wrapper {width: 51.5%;}
 		.section_2 {background-size: 100% 48rem;}
 		.section_4 {background-size: 100% 29rem;}
+		article.benefits {background-size: 100% 45rem;}
+		article.installation {background-size: 100% 47rem;}
+		article.examples {background-size: 100% 56rem;}
+		article.partners {background-size: 130% 49rem;}
 	}

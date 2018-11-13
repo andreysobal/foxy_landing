@@ -15,7 +15,7 @@ $grey_dark_bg: #dddddd;
 $grey_light_bg: #eaeaea;
 $black_bg: #333333;
 $red_text: #eb6320;
-$yellow_text: #ffea00;
+$yellow_text: #ffea00	;
 $green_text: #009c88;
 
 $error: #fef5f5;
@@ -59,6 +59,10 @@ body {background-color: $grey_dark_bg; color: $white; font-family: $main_font;}
 		article.price.green-grad {background: transparent;}
 		.section_2.light-grey-bg,
 		.section_4.light-grey-bg {background-color: transparent;}
+		article.benefits.green-grad {background-color: transparent;}
+		article.installation.black-bg {background-color: transparent;}
+		article.examples.orange-grad {background-color: transparent;}
+		.footer.green-grad {background-color: transparent;}
 	}
 
 	/*wideview monitor*/

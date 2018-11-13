@@ -38,7 +38,12 @@
 	}
 	/*desktop or tablets in landscape*/
 	@media only screen and (min-width: 1000px) {
-		.footer .wrapper {width: 999px; margin: auto;}
+		.footer {
+			position: absolute; left: 0; right: 0; bottom: 0; height: 30rem; padding-top: 10rem;
+			background: url(../res/green-line_2.png) 50% 100% no-repeat; background-size: auto 32.2rem;
+		}
+		.footer .wrapper {width: 950px; margin: auto;}
+		.button__wrapper {top: 1.7rem;}
 	}
 
 	/*wideview monitor*/
@@ -47,5 +52,6 @@
 	}
 	/*supperwide view monitor*/
 	@media only screen and (min-width: 1920px) {
-		.footer .wrapper {width: 49.5%;}
+		.footer {background-size: 120% 33.2rem;}
+		.footer .wrapper {width: 51.5%;}
 	}
