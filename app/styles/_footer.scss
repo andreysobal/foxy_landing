@@ -21,11 +21,14 @@
 .footer__button p {width: 80%; height: auto; padding-bottom: 0.7rem;}
 .footer__button p:first-child {height: 2.3rem; background: url(../res/top_arrow.png) 50% 50% no-repeat; background-size: contain;}
 
+.footer__info {position: relative; width: auto; height: auto;}
 .footer__logo {
-	display: block; width: 80%; height: 4.167rem;
+	display: block; width: 100%; height: 4.167rem;
 	position: relative; 
 	background: url(../res/gglogo.png) 50% 70% no-repeat; background-size: auto 2rem;
 }
+.privacy {display: none;}
+.footer__aside {display: none;}
 
 /*adaptivity*/
 	/*mobile*/
@@ -40,10 +43,36 @@
 	@media only screen and (min-width: 1000px) {
 		.footer {
 			position: absolute; left: 0; right: 0; bottom: 0; height: 30rem; padding-top: 10rem;
-			background: url(../res/green-line_2.png) 50% 100% no-repeat; background-size: auto 32.2rem;
+			background: url(../res/green-line_2.png) 50% 100% no-repeat; background-size: auto 33rem;
 		}
-		.footer .wrapper {width: 950px; margin: auto;}
-		.button__wrapper {top: 1.7rem;}
+		.footer .wrapper {position: relative; width: 950px; margin: auto; flex-direction: row; align-items: flex-end; justify-content: space-between;}
+		.button__wrapper {top: -9.7rem; height: 7.74rem;}
+		.footer__button {width: 7.74rem; font-size: 1.55rem;}
+		.footer__button p:first-child {height: 2.8rem;}
+		.footer__text {width: 27%; text-align: left;}
+		.privacy {display: block; padding-top: 3rem;}
+		
+		.footer__info {width: 27%;}
+
+		.footer__aside {display: block; width: 27%; height: auto;}
+		.footer__form {display: flex; width: 100%; justify-content: center; align-items: flex-start; padding-top: 0;}
+		.footer__form h2 {font-size: 1.16rem; line-height: 2; font-weight: 400;}
+		.footer__form .textarea {
+			height: 5.16rem; width: 100%; 
+			font-size: 1.16rem; text-align: left;
+			background-color: transparent; 
+			border: 0.2rem solid #e7d009; border-radius: 1.3rem; padding: 5px;
+			filter: drop-shadow( -7px 5px 4px rgba(81,50,72,0.3));
+			margin-bottom: 0.6rem;
+			resize: none;
+		} 
+		.footer__form .textarea:focus {outline: none;}
+		.footer__form .button {width: 100%; margin-top: 0; }
+		.footer__contacts {
+			display: block; width: 100%; padding-top: 1.5rem; text-align: right;
+			font-size: 1.16rem; 
+		}
+		.footer__contacts > span {text-transform: uppercase; text-decoration: underline;}
 	}
 
 	/*wideview monitor*/
@@ -52,6 +81,6 @@
 	}
 	/*supperwide view monitor*/
 	@media only screen and (min-width: 1920px) {
-		.footer {background-size: 120% 33.2rem;}
+		.footer {background-size: 130% 33rem;}
 		.footer .wrapper {width: 51.5%;}
 	}
