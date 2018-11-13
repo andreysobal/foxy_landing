@@ -38,10 +38,14 @@
 	}
 	/*desktop or tablets in landscape*/
 	@media only screen and (min-width: 1000px) {
-		
+		.footer .wrapper {width: 999px; margin: auto;}
 	}
 
 	/*wideview monitor*/
-	@media only screen and (min-width: 1441px) {
-
+	@media only screen and (min-width: 1280px) {
+		
+	}
+	/*supperwide view monitor*/
+	@media only screen and (min-width: 1920px) {
+		.footer .wrapper {width: 49.5%;}
 	}

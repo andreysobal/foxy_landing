@@ -55,10 +55,17 @@ body {background-color: $grey_dark_bg; color: $white; font-family: $main_font;}
 	}
 	/*desktop or tablets in landscape*/
 	@media only screen and (min-width: 1000px) {
-		
+		.header.orange-grad {background: transparent;}
+		article.price.green-grad {background: transparent;}
+		.section_2.light-grey-bg,
+		.section_4.light-grey-bg {background-color: transparent;}
 	}
 
 	/*wideview monitor*/
-	@media only screen and (min-width: 1441px) {
+	@media only screen and (min-width: 1280px) {
+		
+	}
+	/*supperwide view monitor*/
+	@media only screen and (min-width: 1920px) {
 
 	}

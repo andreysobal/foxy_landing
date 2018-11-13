@@ -56,17 +56,20 @@ button {
 	}
 	/*desktop or tablets in landscape*/
 	@media only screen and (min-width: 1000px) {
-		html {font-size: 12px;}
+		html {font-size: 15.5px;}
+		.wrapper_main {background: url(../res/sps_1024.png) 0% 0% no-repeat; background-size: 100% 68rem;}
 	}
 
 	/*wideview monitor*/
-	@media only screen and (min-width: 1441px) {
+	@media only screen and (min-width: 1280px) {
+		.wrapper_main {background-image: url(../res/sps_1280.png);}
 
 	}
 
 	/*supperwide view monitor*/
 	@media only screen and (min-width: 1920px) {
-		
+		html {font-size: 0.81vw;}
+		.wrapper_main {background-image: url(../res/sps.png);}
 	}
 
 @import "color";
