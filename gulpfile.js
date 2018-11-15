@@ -53,18 +53,17 @@ gulp.task('libs', () => {
         .pipe(reload({stream: true}));
 });
 
-// gulp.task('tmp', ['libs', 'phpmailer'], () => {
-//     return gulp.src('.tmp/**')
-//         .pipe(gulp.dest('dist'))
-//         .pipe(reload({stream: true}));
-// });
+gulp.task('tmp', ['libs', 'phpmailer'], () => {
+    return gulp.src('.tmp/**')
+        .pipe(gulp.dest('dist'))
+        .pipe(reload({stream: true}));
+});
 
-
-// gulp.task('phpmailer', () => {
-//     return gulp.src('vendor/phpmailer/**')
-//         .pipe(gulp.dest('.tmp/lib'))
-//         .pipe(reload({stream: true}));
-// });
+gulp.task('phpmailer', () => {
+    return gulp.src('vendor/phpmailer/**')
+        .pipe(gulp.dest('.tmp/lib'))
+        .pipe(reload({stream: true}));
+});
 
 
 
@@ -156,6 +155,7 @@ gulp.task('fonts', () => {
 gulp.task('extras', () => {
   return gulp.src([
     '.app/**',
+    '.app/*.php',
     '!app/*.html'
   ], {
     dot: true
@@ -165,7 +165,7 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts', 'libs'/*, 'phpmailer'*/], () => {
+  runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts', 'libs', 'phpmailer'], () => {
 
       connect.server({
           port: 9001,
@@ -293,7 +293,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'libs'/*, 'phpmailer'*//*, 'tmp'*/, 'publish-components'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'libs', 'phpmailer', 'tmp', 'publish-components'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

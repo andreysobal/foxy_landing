@@ -4,6 +4,8 @@
 
 $white: #fff;
 $black: #000;
+$green: #018b86;
+
 $orange_light_bg: #ffc330;
 $orange_dark_bg: #f7992a;
 $yellow_bg: #fbe93a;
@@ -18,7 +20,7 @@ $red_text: #eb6320;
 $yellow_text: #ffea00	;
 $green_text: #009c88;
 
-$error: #fef5f5;
+$error: rgba(255,0,0,0.8);
 $inactive: rgba(232,97,106,0.55);
 
 $main_font:  Helvetica, Arial, sans-serif;
@@ -42,6 +44,16 @@ body {background-color: $grey_dark_bg; color: $white; font-family: $main_font;}
 .button_yellow {
 	background-color: $yellow_bg;
 	background-image: linear-gradient(to bottom, $yellow_bg 0%, $yellow_bg 80%, $orange_bg 100%);
+}
+/* Form Elements */
+input.textarea.error-field, textarea.textarea.error-field {
+  border-color: $error;
+}
+.msg__box {
+	color: $green;
+}
+.ironCurtain {
+  background: $black;
 }
 
 /*adaptivity*/

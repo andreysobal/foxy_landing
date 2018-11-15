@@ -22,5 +22,5 @@ var mySwiper = new Swiper ('.swiper-container', {
   })
 
 //outside navigation arrows controllers
-document.getElementById("prev-slide").addEventListener( "click" , function() {mySwiper.slidePrev();});
-document.getElementById("next-slide").addEventListener( "click" , function() {mySwiper.slideNext();});
+document.getElementById('prev-slide').addEventListener( 'click' , function() {mySwiper.slidePrev();});
+document.getElementById('next-slide').addEventListener( 'click' , function() {mySwiper.slideNext();});

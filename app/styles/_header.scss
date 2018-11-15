@@ -31,10 +31,11 @@
 	padding-bottom: 2.7rem;
 }
 .header_button a {
-	display: block; position: relative;
+	position: relative;
 	width: 13.333rem; height: 2.5rem;
 	margin: auto;
 	font-weight: 700; text-transform: uppercase;
+	display: flex; justify-content: center; align-items: center; font-size: 1.12rem;
 }
 .header__features {
 	display: flex; flex-wrap: wrap; flex-direction: column; justify-content: space-between; align-items: flex-end;

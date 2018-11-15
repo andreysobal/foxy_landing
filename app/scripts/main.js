@@ -10,7 +10,7 @@ function scrollToTop() {
 }
 
 //change images to color
-let partners = document.querySelectorAll(".labels__item");
+let partners = document.querySelectorAll('.labels__item');
 for (var i = partners.length - 1; i >= 0; i--) {
 	partners[i].addEventListener('touchstart', function(event) {
 		setActive(event.currentTarget);
@@ -21,6 +21,6 @@ for (var i = partners.length - 1; i >= 0; i--) {
 }
 
 function setActive (el) {
-	document.querySelector(".active").classList.remove('active');
+	document.querySelector('.active').classList.remove('active');
 	el.classList.add('active');
 }
