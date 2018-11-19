@@ -36,7 +36,15 @@ input.textarea {
 	margin-bottom: 0.6rem;
 	font: inherit; text-align: center; color: black;
 }
+input.textarea.text_white {color: white;}
+input.textarea::-webkit-input-placeholder {color: black;}
+input.textarea:-ms-input-placeholder {color: black;}
+input.textarea::-ms-input-placeholder {color: black;}
 input.textarea::placeholder {color: black;}
+input.textarea.text_white::-webkit-input-placeholder {color: white;}
+input.textarea.text_white:-ms-input-placeholder {color: white;}
+input.textarea.text_white::-ms-input-placeholder {color: white;}
+input.textarea.text_white::placeholder {color: white;}
 label {padding: 0;}
 .button {
 	display: block; position: relative; margin: 0; overflow: hidden;
@@ -122,6 +130,9 @@ article.benefits {padding-bottom: 4.5rem;}
 .installation .button {width: 90%; height: 2.7rem;}
 .installation input.textarea {border-width: 0.1rem; margin-bottom: 1.2rem;}
 .installation .button {margin-top: 0.2rem;}
+.installation input.textarea::-webkit-input-placeholder {color: white;}
+.installation input.textarea:-ms-input-placeholder {color: white;}
+.installation input.textarea::-ms-input-placeholder {color: white;}
 .installation input.textarea::placeholder {color: white;}
 
 article.examples {position: relative;}
@@ -142,7 +153,7 @@ article.examples {position: relative;}
 }
 .prev-slide {background-image: url(../res/vlevo.png); left: -1.2rem; right: auto;}
 .next-slide {background-image: url(../res/vpravo.png); right: -1.2rem; left: auto;}
-//swiper styles
+/*swiper styles*/
 .swiper-pagination-fraction, 
 .swiper-pagination-custom, 
 .swiper-container-horizontal > .swiper-pagination-bullets {bottom: 0.25rem;}

@@ -13,6 +13,7 @@ $(document).ready(function(){
     });
 
     $('.rep-form').submit(function(event){
+        
         let errstr = '';
         let form = event.currentTarget,
             mailField = form.querySelector('.rep-form .email'),
@@ -27,22 +28,24 @@ $(document).ready(function(){
                 errstr +='Поле с вопросом должно содержать минимум 5 символов.';
                 msgField.classList.add('error-field');
             }
-       };
-        if (contains(form, telField)){
+        };
+
+        if (contains(form, telField)) {
             textareas.push(telField);
             if (!telReg.test(telField.value)) {
                 errstr += 'Поле "Ваш номер" должно содержать номер телефона с кодом в формате " +***-**-******* ".' + ' ';
                 telField.classList.add('error-field');
             }
-        }
-        if (contains(form, mailField)){
+        };
+
+        if (contains(form, mailField)) {
             textareas.push(mailField);
             if (!mailReg.test(mailField.value)) {
                 if (errstr.length > 0) errstr += '\n';
                 errstr += 'Поле "Ваш e-mail" должно содержать правильный адрес электронной почты.' + ' ';
                 mailField.classList.add('error-field');
             }
-        }
+        };
 
         if (errstr.length > 0) {
             textareas.forEach(function(item, i){
@@ -62,6 +65,7 @@ $(document).ready(function(){
             $('.ironCurtain').show();
             $('.progressBar').show();
 
+
             $(this).ajaxSubmit({
                 forceSync: true,
                 uploadProgress: function(event, position, total, percentComplete) {
@@ -77,6 +81,7 @@ $(document).ready(function(){
                             $('#progressStatus').html( 'Почти загружено.' + '<br>' + 'Пожалуйста, подождите еще немного.');
                         }, 5000);
                     }
+                    
                     $('.progressBar .bar').css('width', Math.abs(percentComplete * 2.7) + 'px');
 
                 },
@@ -98,6 +103,7 @@ $(document).ready(function(){
                 success: function (data) {
 
                     $('#progressStatus').html('100%');
+                    console.log(telField);
 
                     setTimeout(function() {
                         $('.ironCurtain').hide();
@@ -108,9 +114,9 @@ $(document).ready(function(){
                             _alert('Пожалуйста, заполните все поля формы.');
                         } else {
                             _alert('Сообщение отправлено.');
-                            msgField.value = '';
                             telField.value = '';
                             mailField.value = '';
+                            msgField.value = '';
                         }
                     }, 500);
                 }

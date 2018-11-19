@@ -61,14 +61,13 @@ $subj          =   ' Message From Your Website Form ';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'lib/phpmailer/src/Exception.php';
-require 'lib/phpmailer/src/PHPMailer.php';
-require 'lib/phpmailer/src/SMTP.php';
+// require 'lib/phpmailer/src/Exception.php';
+// require 'lib/phpmailer/src/PHPMailer.php';
+// require 'lib/phpmailer/src/SMTP.php';
 
-//for develop-server
-// require '../.tmp/lib/phpmailer/src/Exception.php';
-// require '../.tmp/lib/phpmailer/src/PHPMailer.php';
-// require '../.tmp/lib/phpmailer/src/SMTP.php';
+require 'vendor/phpmailer/src/Exception.php';
+require 'vendor/phpmailer/src/PHPMailer.php';
+require 'vendor/phpmailer/src/SMTP.php';
 
 $mail = new PHPMailer(false); //defaults to using php "mail()"; the true param means it will throw exceptions on errors, which we need to catch
 $mail->CharSet = "UTF-8";

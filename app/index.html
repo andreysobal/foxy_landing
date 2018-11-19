@@ -132,7 +132,7 @@
 						<h1>Рассчитаем стоимость до копейки</h1>
 						<p class="text_black">Отправьте макет и узнайте точную стоимость</p>
 					</div>
-					<form action="handler.php" method="post" name="price" class="rep-form" novalidate>
+					<form action="../../handler.php" method="post" name="price" class="rep-form" novalidate>
 						<h2 class="text_black">заполните данные</h2>
 						<input type="email" id="email" placeholder="ваш e-mail" name="email" class="textarea email" required>
 						<input type="tel" id="tel" placeholder="ваш номер" name="number" class="textarea tel">
@@ -239,9 +239,10 @@
 					<p>Собственная вышка для монтажа позволяет сделать сотрудничество с нами еще более выгодным.</p>
 					<p class="text_yellow">Мы также подготовили для вас памятку, которая поможет вам сэкономить на печати.</p>
 					<p>Оставьте свои контактные данные и мы отправим ее вам на почту.</p>
-					<form action="handler.php" method="post" name="order" class="rep-form" novalidate id="form_1">
-						<input type="email" placeholder="ваш e-mail" name="email" class="textarea email" required>
-						<input type="tel" placeholder="ваш номер" name="number" pattern="^\+[0-9]{3}\s*?-*?[0-9]{2}\s*?-*?[0-9]{3}\s*?-*?[0-9]{2}\s*?-*?[0-9]{2}$" class="textarea tel">
+					<form action="handler.php" method="post" name="order" class="rep-form" novalidate>
+						<h2 style="display: none;"></h2>
+						<input type="email" placeholder="ваш e-mail" name="email" class="textarea email text_white" required>
+						<input type="tel" placeholder="ваш номер" name="number" pattern="^\+[0-9]{3}\s*?-*?[0-9]{2}\s*?-*?[0-9]{3}\s*?-*?[0-9]{2}\s*?-*?[0-9]{2}$" class="textarea tel text_white">
 						<button type="submit" class="button button_yellow text_black" ><div class="button-wrapp"><span>отправить</span></div></button>
 					</form>
 				</div>
