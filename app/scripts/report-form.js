@@ -103,7 +103,6 @@ $(document).ready(function(){
                 success: function (data) {
 
                     $('#progressStatus').html('100%');
-                    console.log(telField);
 
                     setTimeout(function() {
                         $('.ironCurtain').hide();

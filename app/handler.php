@@ -61,6 +61,7 @@ $subj          =   ' Message From Your Website Form ';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+//for relise-server
 require 'lib/phpmailer/src/Exception.php';
 require 'lib/phpmailer/src/PHPMailer.php';
 require 'lib/phpmailer/src/SMTP.php';
