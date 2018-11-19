@@ -79,7 +79,7 @@ section .img {
 	position: absolute; top: 2rem; right: 1.667rem; 
 	background: url(../res/1_flag.png) 50% 50% no-repeat; background-size: contain; background-position-x: 100%;}
 .section_1 {justify-content: center; margin-top: 2rem; }
-.section_1 h2 {position: relative; width: 100%; padding-top: 2rem; top: auto; right: auto; left: auto; text-align: center;}
+.section_1 h2 {position: relative; width: 100%; /*padding-top: 2rem;*/ top: auto; right: auto; left: auto; text-align: center;}
 .section_1 .img {width: 100%; top: auto; right: auto; position: relative; background-image: url(../res/1_stanok.png);  background-position-x: 50%;}
 .section_1 p:first-of-type {padding-top: 1.3rem; }
 .section_2 .img {width: 80%; left: auto; right: -4.5rem;}
@@ -240,7 +240,7 @@ article.partners {padding-bottom: 5rem;}
 		article.price form {padding-top: 0; width: 40%;}
 		article.price h2 {display: block; font-size: 1.16rem; width: 100%; line-height: 2.5;}
 		article.services {padding-top: 7rem;}
-		article.services h1 {width: 52%;}
+		article.services h1 {width: 58%;}
 
 		input.textarea {height: 2.58rem; border-radius: 2rem; border-width: 2.5px;}
 		.button {height: 2.58rem; border-radius: 2rem; font-size: 1.3rem;}
@@ -249,15 +249,15 @@ article.partners {padding-bottom: 5rem;}
 		section p:first-of-type {padding-top: 1.3rem;}
 
 		.section_1 .wrapper, .section_2 .wrapper {flex-direction: row; justify-content: space-between; align-items: flex-start;}
-		.section_1 .wrapper {height: 18rem;}
+		.section_1 .wrapper {height: 19rem;}
 		.section_1 .article__text {width: 54%;}
 		.section_1 .img {width: 42%; height: 14rem; background-position-y: 0%;}
 
 		.section_2 {background: url(../res/light-grey-line_1.png) 50% 0% no-repeat; background-size: auto 48rem; padding-top: 7rem;}
 		.section_2 .wrapper {height: 41rem; align-items: center;}
-		.section_2 .article__text {width: 51%;}
+		.section_2 .article__text {width: 52%;}
 		.section_2 .img {width: 85%; height: 29rem; right: -14.5rem; background-position-y: 0%;}
-		.section_2 p:last-of-type {padding-bottom: 4.5rem;}
+		.section_2 p:last-of-type {padding-bottom: 7.5rem;}
 		.section_2 .article__text > h2 {position: relative; top: auto; left: auto; right: auto; width: 100%; text-align: center;}
 
 		.section_3 .wrapper {height: 23rem; align-items: flex-end;}
