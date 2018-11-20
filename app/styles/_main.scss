@@ -189,44 +189,31 @@ article.partners {padding-bottom: 5rem;}
 	width: 100%; height: 37.25rem; padding-top: 2.6rem;
 }
 .labels__item {
-	display: block; position: relative;
+	display: flex; align-items: center; justify-content: center;
+	position: relative;
 	width: 7.5rem; height: 4.2rem;
 	color: transparent;
-	background: url(../res/03_06_med_gr.png) 50% 50% no-repeat; background-size: contain;
+	
 }
-.labels__item.active {background-image: url(../res/03_06_med_color.png)}
-.labels__item_2 {background-image: url(../res/03_01_burger_gr.png);}
-.labels__item_3 {background-image: url(../res/03_02_kfc_gr.png);}
-.labels__item_4 {background-image: url(../res/03_03_alivaria_gr.png);}
-.labels__item_5 {background-image: url(../res/03_05_ostrov_gr.png);}
-.labels__item_6 {background-image: url(../res/03_07_mchs_gr.png);}
-.labels__item_7 {background-image: url(../res/03_08_shell_gr.png);}
-.labels__item_8 {background-image: url(../res/03_09_tat_gr.png);}
-.labels__item_9 {background-image: url(../res/03_10_mac_gr.png);}
-.labels__item_10 {background-image: url(../res/03_11_dana_gr.png);}
-.labels__item_11 {background-image: url(../res/03_12_ysk_gr.png);}
-.labels__item_12 {background-image: url(../res/03_13_gippo_gr.png);}
-.labels__item_13 {background-image: url(../res/03_14_belmarket_gr.png);}
-.labels__item_14 {background-image: url(../res/03_15_wargaming_gr.png);}
-.labels__item_15 {background-image: url(../res/03_16_mmb_gr.png);}
-.labels__item_16 {background-image: url(../res/03_17_newbor_gr.png); margin: auto;}
-.labels__item_17 {background-image: url(../res/03_18_a100_gr.png); margin: auto;}
-.labels__item_2.active {background-image: url(../res/03_01_burger_color.png);}
-.labels__item_3.active {background-image: url(../res/03_02_kfc_color.png);}
-.labels__item_4.active {background-image: url(../res/03_03_alivaria_color.png);}
-.labels__item_5.active {background-image: url(../res/03_05_ostrov_color.png);}
-.labels__item_6.active {background-image: url(../res/03_07_mchs_color.png);}
-.labels__item_7.active {background-image: url(../res/03_08_shell_color.png);}
-.labels__item_8.active {background-image: url(../res/03_09_tat_color.png);}
-.labels__item_9.active {background-image: url(../res/03_10_mac_color.png);}
-.labels__item_10.active {background-image: url(../res/03_11_dana_color.png);}
-.labels__item_11.active {background-image: url(../res/03_12_ysk_color.png);}
-.labels__item_12.active {background-image: url(../res/03_13_gippo_color.png);}
-.labels__item_13.active {background-image: url(../res/03_14_belmarket_color.png);}
-.labels__item_14.active {background-image: url(../res/03_15_wargaming_color.png);}
-.labels__item_15.active {background-image: url(../res/03_16_mmb_color.png);}
-.labels__item_16.active {background-image: url(../res/03_17_newbor_color.png);}
-.labels__item_17.active {background-image: url(../res/03_18_a100_color.png);}
+.labels__item .img_wrapper {display: block; position: relative; width: 100%; height: 100%; background: url(../res/sprite_logo_gr.png) 0 -0.9rem no-repeat; background-size: 46rem; transition: background-image 0.4s ease-out;}
+.labels__item.active .img_wrapper {background-image: url(../res/sprite_logo_col.png);}
+.labels__item_2 .img_wrapper {background-position-x: -7.5rem; width: 80%; background-position-y: -1rem; background-size: 42.2rem;}
+.labels__item_3 .img_wrapper {background-position-x: -15rem; width: 100%; background-position-y: -1.4rem; background-size: 46rem;}
+.labels__item_4 .img_wrapper {background-position-x: -18.3rem; width: 80%; height: 105%; background-position-y: 0rem; background-size: 37.5rem;}
+.labels__item_5 .img_wrapper {background-position-x: -26rem; width: 90%; background-position-y: -0.7rem; background-size: 40rem;}
+.labels__item_6 .img_wrapper {background-position-x: -23.6rem; width: 80%; background-position-y: 0rem; background-size: 28.3rem;}
+.labels__item_7 .img_wrapper {background-position-x: -0.5rem; width: 80%; background-position-y: -6rem; background-size: 43rem;}
+.labels__item_8 .img_wrapper {background-position-x: -7.6rem; width: 100%; background-position-y: -6.5rem; background-size: 46rem;}
+.labels__item_9 .img_wrapper {background-position-x: -16.15rem; width: 80%; background-position-y: -7.3rem; background-size: 47rem;}
+.labels__item_10 .img_wrapper {background-position-x: -22.5rem; width: 100%; background-position-y: -7.1rem; background-size: 46rem;}
+.labels__item_11 .img_wrapper {background-position-x: -31.5rem; width: 100%; background-position-y: -7.1rem; background-size: 47rem;}
+.labels__item_12 .img_wrapper {background-position-x: -38.5rem; width: 100%; background-position-y: -6.8rem; background-size: 46rem;}
+.labels__item_13 .img_wrapper {background-position-x: 1rem; width: 100%; background-position-y: -8.6rem; background-size: 33rem;}
+.labels__item_14 .img_wrapper {background-position-x: -15.3rem; width: 100%; height: 110%; background-position-y: -13rem; background-size: 47rem;}
+.labels__item_15 .img_wrapper {background-position-x: -22.5rem; width: 100%; background-position-y: -12.9rem; background-size: 46rem;}
+.labels__item_16 .img_wrapper {background-position-x: -29.3rem; width: 100%;  background-position-y: -12.1rem; background-size: 44rem;}
+.labels__item_17 .img_wrapper {background-position-x: -38.5rem; width: 100%; background-position-y: -12.7rem; background-size: 46rem;}
+.labels__item_16, .labels__item_17 {margin: auto;}
 
 /*adaptivity*/
 	/*mobile*/
@@ -311,9 +298,26 @@ article.partners {padding-bottom: 5rem;}
 		
 		article.partners {background: url(../res/white-line.png) 50% 0% no-repeat; background-size: auto 49rem; padding-top: 8rem; padding-bottom: 8rem; top: -25.5rem;}
 		.labels {height: 27rem;}
-		.labels__item {width: 9rem; height: 5.2rem;}
+		.labels__item {width: 9rem; height: 5.5rem;}
 		.labels__item_6 {height: 7rem;}
 		.labels__item_16, .labels__item_17 {margin: 0;}
+		.labels__item .img_wrapper {background-position: 0 -1rem; background-size: 56rem;}
+		.labels__item_2 .img_wrapper {background-position-x: -9.3rem; background-position-y: -1.15rem; background-size: 53rem;}
+		.labels__item_3 .img_wrapper {background-position-x: -18.6rem; background-position-y: -1.35rem; background-size: 57rem;}
+		.labels__item_4 .img_wrapper {background-position-x: -23.3rem; width: 85%; background-position-y: -0.4rem; background-size: 47.5rem;}
+		.labels__item_5 .img_wrapper {background-position-x: -34.5rem; width: 100%; background-position-y: -1.1rem; background-size: 53rem;}
+		.labels__item_6 .img_wrapper {background-position-x: -40.8rem; width: 90%; background-position-y: -0.1rem; background-size: 49rem;}
+		.labels__item_7 .img_wrapper {background-position-x: -0.8rem; width: 80%; background-position-y: -7.5rem; background-size: 55rem;}
+		.labels__item_8 .img_wrapper {background-position-x: -9.5rem; width: 100%; background-position-y: -7.5rem; background-size: 56rem;}
+		.labels__item_9 .img_wrapper {background-position-x: -20rem; width: 80%; background-position-y: -8.6rem; background-size: 58rem;}
+		.labels__item_10 .img_wrapper {background-position-x: -27.5rem; width: 100%; background-position-y: -8.2rem; background-size: 56rem;}
+		.labels__item_11 .img_wrapper {background-position-x: -38.3rem; width: 100%; background-position-y: -8.4rem; background-size: 57rem;}
+		.labels__item_12 .img_wrapper {background-position-x: -47rem; width: 100%; background-position-y: -8rem; background-size: 56rem;}
+		.labels__item_13 .img_wrapper {background-position-x: 1rem; width: 100%; background-position-y: -11rem; background-size: 43rem;}
+		.labels__item_14 .img_wrapper {background-position-x: -18.5rem; width: 100%; height: 110%; background-position-y: -15.5rem; background-size: 57rem;}
+		.labels__item_15 .img_wrapper {background-position-x: -27.4rem; width: 100%; background-position-y: -15.5rem; background-size: 56rem;}
+		.labels__item_16 .img_wrapper {background-position-x: -35.75rem; width: 100%;  background-position-y: -14.65rem; background-size: 54rem;}
+		.labels__item_17 .img_wrapper {background-position-x: -47.9rem; width: 100%; background-position-y: -15.5rem; background-size: 57rem;}
 	}
 
 	/*wideview monitor*/

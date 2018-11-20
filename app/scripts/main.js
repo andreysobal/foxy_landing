@@ -1,6 +1,5 @@
 // smooth scroll to the anchor id
 function scrollToTop() {
-	console.log('to top');
 	var top = $('#top').offset().top;
 	setTimeout(function() {
 		$('html, body').animate({
