@@ -92,7 +92,7 @@ $(document).ready(function(){
                 error: function(xhr, textStatus, errorThrown) {
                     $('.progressBar #pos').html('');
                     $('.progressBar #total').html('');
-                    $('.progressBar .bar').css('width', '0px');
+                    $('.progressBar .bar').css('width', '10px');
                     $('.ironCurtain').hide();
                     $('.progressBar').hide();
                     _alert('Проблемы при передаче сообщения. Попробуйте еще раз.');
@@ -103,6 +103,7 @@ $(document).ready(function(){
                 success: function (data) {
 
                     $('#progressStatus').html('100%');
+                    $('.progressBar .bar').css('width', '100%');
 
                     setTimeout(function() {
                         $('.ironCurtain').hide();

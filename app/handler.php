@@ -47,9 +47,8 @@ echo json_encode($out_arr);
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
 
-//for relise-server
+//for relise server
 require 'lib/phpmailer/src/Exception.php';
 require 'lib/phpmailer/src/PHPMailer.php';
 require 'lib/phpmailer/src/SMTP.php';
