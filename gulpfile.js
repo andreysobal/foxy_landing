@@ -1,4 +1,3 @@
-// generated on 2018-04-09 using generator-webapp 3.0.1
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync').create();
@@ -10,8 +9,6 @@ const gulpFilter = require('gulp-filter'); // 4.0.0+
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
-
-// const inline = require('gulp-inline');
 
 const httpProxy = require('http-proxy');
 const connect = require('gulp-connect-php7');
@@ -87,13 +84,11 @@ gulp.task('lint:test', () => {
 
 gulp.task('html', ['styles', 'scripts', 'publish-components'], () => {
     return gulp.src('app/*.html')
-    .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    //.pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
-    //.pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
+    .pipe($.useref({searchPath: ['.tmp/**/', 'app/**/', '.']}))
     .pipe($.if(/\.html$/, $.htmlmin({
       collapseWhitespace: false,
       minifyCSS: false,
-      //minifyJS: {compress: {drop_console: false}},
+      minifyJS: {compress: {drop_console: false}},
       processConditionalComments: true,
       removeComments: true,
       removeEmptyAttributes: true,
@@ -154,8 +149,8 @@ gulp.task('fonts', () => {
 
 gulp.task('extras', () => {
   return gulp.src([
-    '.app/**',
-    '.app/*.php',
+    'app/**',
+    'app/*.php',
     '!app/*.html'
   ], {
     dot: true
@@ -297,30 +292,9 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'libs', 'phpmai
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
-//make all css and js inline
-// gulp.task('makeInline', () => {
-//     gulp.src('dist/*.html')
-//         .pipe(inline({
-//             base: 'dist/',
-//             disabledTypes: ['svg', 'img']
-//         }))
-//         .pipe(gulp.dest('dist'));
-//
-//     //del fonts/images/scripts/styles folders
-//     setTimeout(function() {
-//         del([
-//             'dist/images',
-//             'dist/styles',
-//             'dist/fonts',
-//             'dist/scripts'
-//         ]);
-//     }, 1000);
-// });
-
 gulp.task('default', () => {
   return new Promise(resolve => {
     dev = false;
-    //runSequence(['clean', 'wiredep'], 'build', 'makeInline', resolve);
     runSequence(['clean', 'wiredep'], 'build', resolve);
   });
 });
