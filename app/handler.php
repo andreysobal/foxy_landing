@@ -1,11 +1,5 @@
 <?php
-/**
- * Webcore Support forms
- * 13.11.2018
- */
 
-
-$form = 'support';
 $devname = strpos($_SERVER['HTTP_USER_AGENT'], 'Unknown');
 
 $remote_referer_arr = parse_url($_SERVER['HTTP_REFERER']);
@@ -13,10 +7,11 @@ $this_file_arr = parse_url($_SERVER['HTTP_HOST']);
 
 if ($remote_referer_arr['host'] != $remote_referer_arr['host']) die;
 
-// require_once '../config.php';
 require_once 'config.php';
-$email         = (isset($_POST['email'])) ? htmlspecialchars(stripslashes($_POST['email']), ENT_QUOTES, "UTF-8") : '';
-$number         = (isset($_POST['number'])) ? htmlspecialchars(stripslashes($_POST['number']), ENT_QUOTES, "UTF-8") : '';
+
+$email         	= (isset($_POST['email'])) ? htmlspecialchars(stripslashes($_POST['email']), ENT_QUOTES, "UTF-8") : 'не указан';
+$number         = (isset($_POST['number'])) ? htmlspecialchars(stripslashes($_POST['number']), ENT_QUOTES, "UTF-8") : 'не указан';
+$message 				= (isset($_POST['message'])) ? htmlspecialchars(stripslashes($_POST['message']), ENT_QUOTES, "UTF-8") : '';
 
 $utm_source         = (isset($_POST['utm_source'])) ? htmlspecialchars(stripslashes($_POST['utm_source']), ENT_QUOTES, "UTF-8") : '';
 $utm_medium         = (isset($_POST['utm_medium'])) ? htmlspecialchars(stripslashes($_POST['utm_medium']), ENT_QUOTES, "UTF-8") : '';
@@ -30,36 +25,29 @@ $str_perehoda       = (isset($_POST['str_perehoda'])) ? htmlspecialchars(stripsl
 
 if (isset($_POST['siteurl'])) $_POST['siteurl'] = htmlspecialchars(stripslashes($_POST['siteurl']), ENT_QUOTES, "UTF-8");
 
-$from = $email;
-
 $message = nl2br($message);
 
-$text = '';
+$text .= '<b>Email клиента:</b> ' . $email . "<br>" . PHP_EOL;
+$text .= '<b>Телефон клиента:</b> ' . $number . "<br>" . PHP_EOL;
+if (!!$message) {$text .= '<b>Заданный вопрос:</b> ' . $message . "<br><br>" . PHP_EOL;}
 
-$text .= '<b>Email:</b> ' . $email . "<br>" . PHP_EOL;
-$text .= '<b>Number:</b> ' . $number . "<br>" . PHP_EOL;
-
-if ($message != '') $text .= $message;
-$text .= '<b>utm_source:</b> ' . $utm_source . "<br>" . PHP_EOL;
-$text .= '<b>utm_medium:</b> ' . $utm_medium . "<br>" . PHP_EOL;
-$text .= '<b>utm_campaign:</b> ' . $utm_campaign . "<br>" . PHP_EOL;
-$text .= '<b>utm_term:</b> ' . $utm_term . "<br>" . PHP_EOL;
-$text .= '<b>utm_content:</b> ' . $utm_content . "<br>" . PHP_EOL;
-$text .= '<b>utm_keyword:</b> ' . $utm_keyword . "<br>" . PHP_EOL;
-$text .= '<b>str_perehoda:</b> ' . $str_perehoda . "<br>" . PHP_EOL;
+$text .= '<b>UTM-метки:</b><br>' . PHP_EOL;
+$text .= 'utm_source: ' . $utm_source . "<br>" . PHP_EOL;
+$text .= 'utm_medium: ' . $utm_medium . "<br>" . PHP_EOL;
+$text .= 'utm_campaign: ' . $utm_campaign . "<br>" . PHP_EOL;
+$text .= 'utm_term: ' . $utm_term . "<br>" . PHP_EOL;
+$text .= 'utm_content: ' . $utm_content . "<br>" . PHP_EOL;
+$text .= 'utm_keyword: ' . $utm_keyword . "<br>" . PHP_EOL;
+$text .= 'str_perehoda: ' . $str_perehoda . "<br>" . PHP_EOL;
 
 $out_arr = Array( 'sent'=> 1, 'number' => $number, 'email' => $email, 'message' => $message );
 echo json_encode($out_arr);
-
-//if about anything
-$to            =   $mail[$form];
-$toName        =   $producer . ' Manager';
-$subj          =   ' Message From Your Website Form ';
 
 //PHPMailer
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
 //for relise-server
 require 'lib/phpmailer/src/Exception.php';
@@ -71,21 +59,31 @@ require 'lib/phpmailer/src/SMTP.php';
 // require '../.tmp/lib/phpmailer/src/PHPMailer.php';
 // require '../.tmp/lib/phpmailer/src/SMTP.php';
 
+
 $mail = new PHPMailer(false); //defaults to using php "mail()"; the true param means it will throw exceptions on errors, which we need to catch
+//Server settings
+$mail->SMTPOptions = array(
+	'ssl' => array(
+		'verify_peer' => false,
+		'verify_peer_name' => false,
+		'allow_self_signed' => true
+	)
+);
+$mail->SMTPDebug = 2;
+$mail->Host = $fromHost;
+$mail->Port = $fromPort;
+$mail->SMTPSecure = "tls";
+$mail->SMTPAuth = true;
 $mail->CharSet = "UTF-8";
 
-$mail->AddAddress($to, $toName);
-$mail->AddReplyTo($replTo, $replToName);
-$mail->SetFrom($fromEmail, $fromName);
-$mail->Subject = $subj;
-$mail->MsgHTML($text);
-$mail->Sender = $from;
-
-$mail->IsSMTP();
-$mail->Host = "smtp.advancedhosters.com";
-$mail->SMTPAuth = true;
 $mail->Username = $fromEmail;
 $mail->Password = $fromPass;
+//Recipients
+$mail->AddAddress($recipientMail, $recipientName);
+$mail->SetFrom('mail@foxystudio.by', "Website Form");
+$mail->Subject = $subj;
+$mail->MsgHTML($text);
+
 
 try {
     if (isset($_FILES['images']) && count($_FILES['images']['name']) > 0) {

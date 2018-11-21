@@ -1,18 +1,16 @@
-<?
+<?php
+/*Configuration file of Forms*/
 
-/**
- * Configuration file of Support Forms
-*/
+/*Commun information*/
+$producer             = 'FoxStudio';
+$recipientMail       	= 'altruist2008@tut.by';
+$recipientName				= $producer + ' manager';
+$subj          				= 'Message From Your Website Form';
 
-$producer               = 'FoxStudio';
-
-$mail['support']       = 'altruist2008@tut.by';
-$fromEmail 				= 'siteform@ascellamobile.com';
-$fromName               = 'bla-bla';
-$fromPass               = 'ljkhks034987WdkN#';
-
-$formName['support']    = 'Support';
-
-$faviconIcon = '';
+/*Using email address for support*/
+$fromEmail 							= 'senderform';
+$fromHost 							= 'smtp.yandex.ru';
+$fromPort 							= '465';
+$fromPass               = 'fhHdyR25$fsd2';
 
 ?>

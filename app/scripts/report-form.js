@@ -113,9 +113,9 @@ $(document).ready(function(){
                             _alert('Пожалуйста, заполните все поля формы.');
                         } else {
                             _alert('Сообщение отправлено.');
-                            telField.value = '';
-                            mailField.value = '';
-                            msgField.value = '';
+                            if (!!telField) telField.value = '';
+                            if (!!mailField) mailField.value = '';
+                            if (!!msgField) msgField.value = '';
                         }
                     }, 500);
                 }
