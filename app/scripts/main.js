@@ -23,3 +23,4 @@ function setActive (el) {
 	document.querySelector('.active').classList.remove('active');
 	el.classList.add('active');
 }
+

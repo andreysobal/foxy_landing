@@ -1,3 +1,6 @@
+//wow.js
+new WOW().init();
+
 //swiper slider
 var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
