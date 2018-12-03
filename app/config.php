@@ -2,15 +2,15 @@
 /*Configuration file of Forms*/
 
 /*Commun information*/
-$producer             = 'FoxStudio';
-$recipientMail       	= 'altruist2008@tut.by';
+$producer             = 'recipient'; //replace with recipient title or Name of the recipients organization
+$recipientMail       	= 'recipient_mail@tut.by'; //replace with recipient e-mail 
 $recipientName				= $producer + ' manager';
 $subj          				= 'Message From Your Website Form';
 
 /*Using email address for support*/
-$fromEmail 							= 'senderform';
-$fromHost 							= 'smtp.yandex.ru';
-$fromPort 							= '465';
-$fromPass               = 'fhHdyR25$fsd2';
+$fromEmail 							= 'formsender'; //replace with your using e-mail sender address
+$fromHost 							= 'smtp.yandex.ru'; //replace with your using e-mail sender host
+$fromPort 							= '465'; //replace with your using e-mail sender port
+$fromPass               = 'password'; //replace with your using e-mail sender password
 
 ?>
